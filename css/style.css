@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:root {
+  font-size: 62.5%;
+
+  --hue-base: 195;
+  --hue-text: 240;
+  --color-base-white: hsla(0, 0%, 100%);
+  --color-base-gray-100: hsla(var(--hue-base), 100%, 98%, 1);
+  --color-base-brand-400: hsla(var(--hue-base), 46%, 40%, 1);
+  --color-base-brand-500: hsla(var(--hue-base), 91%, 25%, 1);
+  --color-text-dark-500: hsla(var(--hue-text), 6%, 8%, 1);
+  --color-text-dark-900: hsla(var(--hue-text), 6%, 13%, 1);
+  font-family: "Mulish";
+}
+body #app {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--color-text-dark-500);
+}
+header {
+  background: var(--color-base-brand-500);
+  display: grid;
+  height: 7.2rem;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: center;
+  justify-items: space-between;
+  gap: 2.55rem;
+  padding: 1.2rem 2.8rem;
+}
+header form {
+  text-align: center;
+}
+header .avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+header figure.icon {
+  padding: 0.8rem;
+  border-radius: 50%;
+  background: var(--color-base-gray-100);
+}
+header .input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+header .input-wrapper input,
+input:focus-within {
+  width: 100%;
+  max-width: 108rem;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+/* input:focus {
+  outline: none;
+} */
+header .input-wrapper input::placeholder {
+  color: var(--color-base-white);
+  font-family: "Mulish";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+main .containet,
+aside {
+  padding: 0 2.2rem;
+  margin: 3.2rem 0;
+}
+
+main > figure.capa img {
+  width: 100%;
+  height: 21.9rem;
+  object-fit: cover;
+  overflow: hidden;
+}
+main .datails {
+  color: var(--color-text-dark-900);
+  margin-bottom: 3.1rem;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+main .datails figcaption {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+main .datails figure.like {
+  display: inline-flex;
+  justify-content: center;
+
+  align-items: center;
+  padding: 0.8rem;
+  border-radius: 50%;
+  background: var(--color-base-brand-500);
+}
+main .datails h1 {
+  font-weight: 700;
+  line-height: 160%;
+  font-size: 2.4rem;
+}
+
+main .content p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+aside article {
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+aside article .card {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+aside article .card img {
+  width: 15.1rem;
+  height: 8.4rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+aside article .card h2 {
+  color: var(--color-text-dark-900);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 160%;
+  margin-bottom: 1.3rem;
+}
+aside article .card p {
+  color: var(--color-text-dark-900);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+footer {
+  width: 100%;
+  background-color: var(--color-base-brand-400);
+}
+footer p {
+  color: var(--color-base-white);
+  text-align: center;
+  padding: 1.6rem;
+  font-weight: 600;
+}
+
+@media (min-width: 769px) {
+  #app {
+    height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-columns: 2fr 1fr;
+  }
+  header,
+  footer {
+    grid-column: 1/3;
+  }
+  main {
+    margin: 4.4rem 3.4rem 0 10rem;
+  }
+  main .datails {
+    width: 100%;
+    flex-direction: row;
+    align-items: space-between;
+    justify-items: space-between;
+  }
+  main .datails h1 {
+    min-width: 34rem;
+  }
+  main > figure.capa img {
+    width: 100%;
+    overflow: hidden;
+    height: max-content;
+    border-radius: 0.5rem;
+  }
+  aside {
+    max-width: 50.9rem;
+    animation: toemerge 2s ease-in-out;
+  }
+
+  @keyframes toemerge {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
