@@ -10,4 +10,4 @@ Para fazer o deploy desse projeto rode <br>
 
 ## Demonstração
 
-<img src='./img/design2.png' alt="Tela de demostração" width="100%" height="100%"> <br>
+<img src='./img/laptop.jpg' alt="Tela de demostração" width="100%" height="100%"> <br>
